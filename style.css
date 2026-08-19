@@ -1,0 +1,1221 @@
+:root {
+    --preto: #0D0D0D;
+    --grafite: #1A1A1A;
+    --branco: #F5F2F0;
+
+    --rosa: #D4146E;
+    --roxo: #713CFF;
+    --azul: #3455FF;
+
+    --gradiente: linear-gradient(
+        90deg,
+        var(--rosa) 0%,
+        var(--roxo) 50%,
+        var(--azul) 100%
+    );
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+
+    font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+}
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(40px, 7vw, 90px) 24px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(212, 20, 110, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(52, 85, 255, 0.12),
+            transparent 35%
+        ),
+        var(--preto);
+}
+
+.hero-container {
+    width: min(100%, 1100px);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-logo {
+    width: clamp(230px, 34vw, 420px);
+    height: auto;
+    margin-bottom: 18px;
+}
+
+.hero-tag {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.62rem, 1vw, 0.78rem);
+    font-weight: 600;
+
+    letter-spacing: 0.32em;
+
+    margin-bottom: clamp(32px, 5vw, 55px);
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6.4rem);
+    line-height: 0.94;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+
+    max-width: 900px;
+}
+
+.hero h1 span {
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+    margin-top: clamp(28px, 4vw, 42px);
+
+    font-size: clamp(1.35rem, 3vw, 2.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-texto {
+    max-width: 650px;
+
+    margin-top: clamp(24px, 3vw, 36px);
+
+    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+    line-height: 1.7;
+
+    color: rgba(245, 242, 240, 0.82);
+}
+
+.hero-texto strong {
+    color: var(--branco);
+}
+
+.hero-botoes {
+    width: min(100%, 620px);
+
+    margin-top: clamp(30px, 4vw, 44px);
+
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.botao {
+    flex: 1;
+
+    padding: 18px 24px;
+
+    border-radius: 14px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12);
+}
+
+.botao-rosa {
+    background: var(--rosa);
+    color: var(--branco);
+}
+
+.botao-rosa {
+    background: var(--rosa);
+    color: var(--branco);
+}
+
+.botao-roxo {
+    background: linear-gradient(
+        90deg,
+        var(--roxo),
+        var(--azul)
+    );
+    color: var(--branco);
+}
+/* =========================
+   MOBILE - HERO
+========================= */
+
+/* =========================
+   O QUE FAZEMOS
+========================= */
+
+.servicos {
+    padding: clamp(80px, 10vw, 140px) 24px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(212, 20, 110, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(113, 60, 255, 0.14),
+            transparent 30%
+        ),
+        var(--preto);
+}
+
+.secao-container {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+}
+
+.secao-tag {
+    text-align: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.65rem, 1vw, 0.78rem);
+    font-weight: 600;
+
+    letter-spacing: 0.28em;
+
+    margin-bottom: 18px;
+}
+
+.secao-titulo {
+    text-align: center;
+
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    line-height: 1;
+    font-weight: 800;
+
+    margin-bottom: 22px;
+}
+
+.secao-texto {
+    max-width: 760px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+    line-height: 1.65;
+
+    color: rgba(245, 242, 240, 0.78);
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+
+    margin-top: clamp(48px, 6vw, 72px);
+}
+
+.servico-card {
+    min-height: 230px;
+
+    padding: 38px;
+
+    border-radius: 26px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(26, 26, 26, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 28px 60px rgba(0, 0, 0, 0.32);
+}
+
+.servico-card h3 {
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.servico-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: rgba(245, 242, 240, 0.78);
+}
+
+.card-rosa {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212, 20, 110, 0.17),
+            rgba(26, 26, 26, 0.95) 55%
+        );
+}
+
+.card-roxo {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(113, 60, 255, 0.16),
+            rgba(26, 26, 26, 0.95) 55%
+        );
+}
+
+.card-azul {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(52, 85, 255, 0.15),
+            rgba(26, 26, 26, 0.95) 55%
+        );
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+
+.cta-final {
+    padding: clamp(90px, 12vw, 150px) 24px;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(212, 20, 110, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(52, 85, 255, 0.14),
+            transparent 32%
+        ),
+        var(--preto);
+}
+
+.cta-final-container {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-final-tag {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.6rem, 1vw, 0.78rem);
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    margin-bottom: 20px;
+    color: var(--branco);
+}
+
+.cta-final-titulo {
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.cta-final-titulo span {
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta-final-texto {
+    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+    line-height: 1.6;
+    color: var(--branco);
+    margin-bottom: 42px;
+}
+
+.cta-final-botoes {
+    width: min(100%, 620px);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.cta-final-botao {
+    flex: 1;
+    padding: 18px 24px;
+
+    border-radius: 14px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.cta-final-botao:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12);
+}
+
+.cta-final-rosa {
+    background: var(--rosa);
+    color: var(--branco);
+}
+
+.cta-final-roxo {
+    background: linear-gradient(
+        90deg,
+        var(--roxo),
+        var(--azul)
+    );
+    color: var(--branco);
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: auto;
+    padding: 8px 22px 50px;
+    align-items: flex-start;
+}
+
+    .hero-container {
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto;
+    }
+
+    .hero-logo {
+    width: 82%;
+    max-width: 330px;
+    margin: 0 auto 52px;
+}
+    .hero-tag {
+        font-size: 0.62rem;
+        letter-spacing: 0.22em;
+        margin-bottom: 28px;
+    }
+
+       .hero h1 {
+        font-size: clamp(2.45rem, 11vw, 3.15rem);
+        line-height: 0.94;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h2 {
+        font-size: clamp(1.25rem, 5.8vw, 1.7rem);
+        line-height: 1.05;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-texto {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botoes {
+        width: 100%;
+        max-width: 360px;
+
+        flex-direction: column;
+
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .botao {
+        width: 100%;
+        padding: 17px 20px;
+        flex: none;
+    }
+
+.nao-quebra {
+        white-space: nowrap;
+    }
+    .cta-final-botoes {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+.cta-final-botao {
+    width: 100%;
+    flex: none;
+    padding: 16px 20px;
+}
+}
+
+
+/* O QUE FAZEMOS - MOBILE */
+
+.servicos {
+    padding: 60px 20px;
+}
+
+.secao-container {
+    width: 100%;
+}
+
+.secao-titulo {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.secao-texto {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    width: 100%;
+    margin-top: 40px;
+}
+
+.servico-card {
+    width: 100%;
+    min-height: auto;
+
+    padding: 30px 26px;
+
+    border-radius: 22px;
+}
+
+.servico-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.15;
+
+    margin-bottom: 16px;
+}
+
+.servico-card p {
+    font-size: 0.96rem;
+    line-height: 1.55;
+}
+/* ANIMAÇÃO DE ENTRADA */
+
+@keyframes entradaHero {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-logo,
+.hero-tag,
+.hero h1,
+.hero h2,
+.hero-texto,
+.hero-botoes {
+    opacity: 0;
+    animation: entradaHero 0.8s ease forwards;
+}
+
+.hero-logo {
+    animation-delay: 0.1s;
+}
+
+.hero-tag {
+    animation-delay: 0.2s;
+}
+
+.hero h1 {
+    animation-delay: 0.3s;
+}
+
+.hero h2 {
+    animation-delay: 0.4s;
+}
+
+.hero-texto {
+    animation-delay: 0.5s;
+}
+
+.hero-botoes {
+    animation-delay: 0.6s;
+}
+/* =========================
+   NOSSA FORÇA
+========================= */
+
+.movimento {
+    padding: 80px 24px 100px;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(212, 20, 110, 0.13),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(52, 85, 255, 0.12),
+            transparent 30%
+        ),
+        var(--preto);
+}
+
+.movimento-container {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+}
+
+.movimento-cabecalho {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.movimento-tag {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    margin-bottom: 18px;
+}
+
+.movimento-cabecalho h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1;
+    font-weight: 800;
+    max-width: 900px;
+    margin: 0 auto 22px;
+}
+
+.movimento-cabecalho > p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(245, 242, 240, 0.78);
+}
+
+.movimento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.movimento-card {
+    min-height: 220px;
+    padding: 38px;
+    border-radius: 26px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(26, 26, 26, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.movimento-card-centro {
+    grid-column: 1 / -1;
+    width: calc(50% - 12px);
+    justify-self: center;
+}
+
+.movimento-card h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    margin-bottom: 16px;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.movimento-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(245, 242, 240, 0.8);
+}
+
+
+/* =========================
+   NOSSA FORÇA - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .movimento {
+        padding: 60px 20px 80px;
+    }
+
+    .movimento-cabecalho h2 {
+        font-size: 2rem;
+        line-height: 1.05;
+        max-width: 390px;
+    }
+
+    .movimento-cabecalho > p {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        max-width: 360px;
+    }
+
+    .movimento-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    .movimento-card,
+    .movimento-card-centro {
+        width: 100%;
+        min-height: auto;
+        grid-column: auto;
+        padding: 30px 26px;
+    }
+
+    .movimento-card h3 {
+        font-size: 1.15rem;
+        line-height: 1.15;
+        margin-bottom: 14px;
+    }
+
+    .movimento-card p {
+        font-size: 0.94rem;
+        line-height: 1.55;
+    }
+}
+/* TÍTULOS EM DEGRADÊ */
+.movimento-cabecalho h2,
+.movimento-card h3 {
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* PARÁGRAFOS BRANCOS */
+.movimento-cabecalho p,
+.movimento-card p {
+    color: var(--branco);
+}
+/* TÍTULOS EM DEGRADÊ */
+.secao-titulo,
+.servico-card h3,
+.movimento-cabecalho h2,
+.movimento-card h3 {
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* PARÁGRAFOS BRANCOS */
+.secao-texto,
+.servico-card p,
+.movimento-cabecalho p,
+.movimento-card p {
+    color: var(--branco);
+}
+/* =========================
+   PARA QUEM É A PLUS
+========================= */
+
+.publicos {
+    padding: 80px 24px 100px;
+
+    background:
+        radial-gradient(
+            circle at 12% 20%,
+            rgba(212, 20, 110, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 78%,
+            rgba(52, 85, 255, 0.13),
+            transparent 32%
+        ),
+        var(--preto);
+}
+
+.publicos-container {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.publicos-tag {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    margin-bottom: 18px;
+    color: var(--branco);
+}
+
+.publicos-titulo {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    font-weight: 800;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 22px;
+}
+
+.publicos-texto {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--branco);
+}
+
+.publicos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+}
+
+.publico-card {
+    min-height: 300px;
+    padding: 40px 36px;
+    border-radius: 26px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212, 20, 110, 0.12),
+            rgba(26, 26, 26, 0.95) 55%
+        );
+
+    border: 1px solid rgba(212, 20, 110, 0.38);
+}
+
+.publico-card:nth-child(2) {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(113, 60, 255, 0.14),
+            rgba(26, 26, 26, 0.95) 55%
+        );
+
+    border-color: rgba(52, 85, 255, 0.42);
+}
+
+.publico-card h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    margin-bottom: 18px;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.publico-card p {
+    max-width: 470px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--branco);
+}
+
+.publico-botao {
+    margin-top: 28px;
+    padding: 16px 28px;
+    border-radius: 14px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    color: var(--branco);
+    background: var(--rosa);
+
+    transition: transform 0.25s ease;
+}
+
+.publico-card:nth-child(2) .publico-botao {
+    background: linear-gradient(
+        90deg,
+        var(--roxo),
+        var(--azul)
+    );
+}
+
+.publico-botao:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   PARA QUEM É A PLUS - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .publicos {
+        padding: 60px 20px 80px;
+    }
+
+    .publicos-titulo {
+        font-size: 2rem;
+        line-height: 1.05;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .publicos-texto {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        max-width: 350px;
+    }
+
+    .publicos-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    .publico-card {
+        width: 100%;
+        min-height: auto;
+        padding: 32px 26px;
+    }
+
+    .publico-card h3 {
+        font-size: 1.15rem;
+        line-height: 1.15;
+    }
+
+    .publico-card p {
+        font-size: 0.94rem;
+        line-height: 1.55;
+    }
+
+    .publico-botao {
+        width: 100%;
+        padding: 16px 20px;
+    }
+}
+/* =========================
+   POR QUE A PLUS
+========================= */
+
+.porque-plus {
+    padding: 80px 24px 100px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(212, 20, 110, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(52, 85, 255, 0.12),
+            transparent 30%
+        ),
+        var(--preto);
+}
+
+.porque-container {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.porque-tag {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    color: var(--branco);
+    margin-bottom: 18px;
+}
+
+.porque-titulo {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    font-weight: 800;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 22px;
+}
+
+.porque-texto {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--branco);
+}
+
+.porque-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.porque-item {
+    padding: 36px 28px;
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(26, 26, 26, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+}
+
+.porque-raio {
+    width: 54px;
+    height: auto;
+    margin-bottom: 22px;
+}
+
+.porque-item h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    margin-bottom: 16px;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.porque-item p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--branco);
+    max-width: 300px;
+}
+
+
+/* =========================
+   POR QUE A PLUS - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .porque-plus {
+        padding: 60px 20px 80px;
+    }
+
+    .porque-titulo {
+        font-size: 2rem;
+        line-height: 1.05;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .porque-texto {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        max-width: 350px;
+    }
+
+    .porque-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    .porque-item {
+        width: 100%;
+        min-height: auto;
+        padding: 32px 26px;
+    }
+
+    .porque-raio {
+        width: 48px;
+        margin-bottom: 18px;
+    }
+
+    .porque-item h3 {
+        font-size: 1.15rem;
+    }
+
+    .porque-item p {
+        font-size: 0.94rem;
+        line-height: 1.55;
+        max-width: 340px;
+    }
+}
+/* =========================
+   CORREÇÃO FINAL DO RODAPÉ
+========================= */
+
+.footer {
+    padding: 52px 22px 28px;
+    background: #080808;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    display: block;
+    width: 140px;
+    max-width: 42%;
+    height: auto;
+    margin: 0 auto 18px;
+}
+
+.footer-frase {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    color: var(--branco);
+    margin-bottom: 22px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 24px;
+}
+
+.footer-links a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-linha {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 0 auto 20px;
+}
+
+.footer-copy {
+    font-size: 0.68rem;
+    line-height: 1.5;
+    color: rgba(245, 242, 240, 0.55);
+    text-align: center;
+}
